@@ -1,7 +1,9 @@
 import LoginScreen from './src/screens/LoginScreen';
 
-const App = () => (
-  <LoginScreen />
-);
+const App = () => {
+  return (
+    <LoginScreen />
+  );
+}
 
 export default App;
