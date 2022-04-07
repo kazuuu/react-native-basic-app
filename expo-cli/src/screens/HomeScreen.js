@@ -30,7 +30,7 @@ const HomeScreen = ({ navigation, route }) => (
         <Text style={styles.buttonText}>Alert</Text>
       </Pressable>
 
-      <Pressable style={styles.button} onPress={handleAlert}>
+      <Pressable style={styles.button} onPress={() => navigation.navigate("Exemplo01")}>
         <Text style={styles.buttonText}>TextInput e State</Text>
       </Pressable>
     </View>
