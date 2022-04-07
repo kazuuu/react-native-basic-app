@@ -1,14 +1,16 @@
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-const LoginScreen = ({ navigation }) => (
-  <View style={styles.container}>
+const LoginScreen = ({ navigation }) => {
+  return (
+    <View style={styles.container}>
     <Text>Login Screen</Text>
     <Button 
       title='Ir para Home'
       onPress={() => navigation.replace('Home', { username: 'Joao' })}
     />
   </View>
-);
+  );
+}
 
 export default LoginScreen;
 
@@ -19,4 +21,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
