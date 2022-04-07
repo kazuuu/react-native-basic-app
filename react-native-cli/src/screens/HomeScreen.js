@@ -15,6 +15,7 @@ const HomeScreen = ({ navigation, route }) => {
   return (
     <ImageBackground source={require('../../assets/app_bg.png')} style={styles.ImageBackground}>
       <View style={styles.container}>
+        <Image source={require('../../assets/app_trophy.png')} style={styles.imageTrophy} />
         <Text>Home Screen</Text>
         <Text>Seja bem vindo, {route.params.username}</Text>
         <Button 
