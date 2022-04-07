@@ -1,41 +1,38 @@
 import { StyleSheet, Text, Image, Button, ImageBackground, View, Pressable, Alert } from 'react-native';
 
-const handleAlert = () => Alert.alert(
-  "Sucesso",
-  "Simple Alert",
-  [
-    {
-      text: 'Ok',
-      onPress: () => console.log("Alert Pressed")
-    }
-  ]
-);
+const HomeScreen = ({ navigation, route }) => {
+  const handleAlert = () => Alert.alert(
+    "Sucesso",
+    "Simple Alert",
+    [
+      {
+        text: 'Ok',
+        onPress: () => console.log("Alert Pressed")
+      }
+    ]
+  );
+    
+  return (
+    <ImageBackground source={require('../../assets/app_bg.png')} style={styles.ImageBackground}>
+      <View style={styles.container}>
+        <Text>Home Screen</Text>
+        <Text>Seja bem vindo, {route.params.username}</Text>
+        <Button 
+          title='Sair'
+          onPress={() => navigation.replace('Login')}
+        />
 
-const HomeScreen = ({ navigation, route }) => (
-  <ImageBackground source={require('../../assets/app_bg.png')} style={styles.ImageBackground}>
-    <View style={styles.container}>
-      <Image 
-        style={styles.imageTrophy}
-        source={require('../../assets/app_trophy.png')}
-      />
-      <Text>Home Screen</Text>
-      <Text>Seja bem vindo, {route.params.username}</Text>
+        <Pressable style={styles.button} onPress={handleAlert}>
+          <Text style={styles.buttonText}>Alert</Text>
+        </Pressable>
 
-      <Button 
-        title='Sair'
-        onPress={() => navigation.replace('Login')}
-      />
-
-      <Pressable style={styles.button} onPress={handleAlert}>
-        <Text style={styles.buttonText}>Alert</Text>
-      </Pressable>
-
-      <Pressable style={styles.button} onPress={() => navigation.navigate("Exemplo01")}>
-        <Text style={styles.buttonText}>TextInput e State</Text>
-      </Pressable>
-    </View>
-  </ImageBackground>
-);
+        <Pressable style={styles.button} onPress={() => navigation.navigate("Exemplo01")}>
+          <Text style={styles.buttonText}>TextInput e State</Text>
+        </Pressable>
+      </View>
+    </ImageBackground>
+  );
+}
 
 export default HomeScreen;
 
