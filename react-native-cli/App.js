@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import LoginScreen from './src/screens/LoginScreen';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Screen 1</Text>
+      <LoginScreen />
     </View>
   );
 }
