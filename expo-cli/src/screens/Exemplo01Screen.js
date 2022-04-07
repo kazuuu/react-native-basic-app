@@ -18,7 +18,6 @@ const Exemplo01Screen = ({ navigation }) => {
       return
     setListComprar(previous => [...previous, textInputComprar]);
     setTextInputComprar('')
-
   }
 
   const handleRemoveItem = (index) => {
