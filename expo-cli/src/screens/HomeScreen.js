@@ -13,11 +13,11 @@ const HomeScreen = ({ navigation, route }) => {
   );
     
   return (
-    <ImageBackground source={require('../../assets/app_bg.png')} style={styles.ImageBackground}>
+    <ImageBackground source={require('../../assets/fiap_bg.png')} style={styles.ImageBackground}>
       <View style={styles.container}>
         <Image source={require('../../assets/app_trophy.png')} style={styles.imageTrophy} />
-        <Text>Home Screen</Text>
-        <Text>Seja bem vindo, {route.params.username}</Text>
+        <Text style={styles.text}>Home Screen</Text>
+        <Text style={styles.text}>Seja bem vindo, {route.params.username}</Text>
         <Button 
           title='Sair'
           onPress={() => navigation.replace('Login')}
@@ -65,6 +65,9 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   buttonText: {
+    color: 'white',
+  },
+  text: { 
     color: 'white',
   }
 });
