@@ -1,6 +1,6 @@
 import { StyleSheet, Text, Image, Button, ImageBackground, View, Pressable, Alert } from 'react-native';
 
-const HomeScreen = ({ navigation, route }) => {
+const HomeScreen = ({ navigation }) => {
   const handleAlert = () => Alert.alert(
     "Sucesso",
     "Simple Alert",
@@ -17,7 +17,7 @@ const HomeScreen = ({ navigation, route }) => {
       <View style={styles.container}>
         <Image source={require('../../assets/app_trophy.png')} style={styles.imageTrophy} />
         <Text>Home Screen</Text>
-        <Text>Seja bem vindo, {route.params.username}</Text>
+        <Text>Seja bem vindo, </Text>
         <Button 
           title='Sair'
           onPress={() => navigation.replace('Login')}
