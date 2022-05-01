@@ -1,3 +1,4 @@
+import React from 'react';
 import { StyleSheet, Text, Image, Button, ImageBackground, View, Pressable, Alert } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
