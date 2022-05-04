@@ -15,7 +15,7 @@ export default () => {
                 headerShown: false,
                 unmountOnBlur: true,
                 tabBarShowLabel: false,
-                tabBarStyle: { height: 50 },
+                tabBarStyle: { height: Platform.OS === 'ios' ? 100 : 50 },
                 tabBarActiveTintColor: 'tomato',
                 tabBarInactiveTintColor: 'gray',
             })}
