@@ -9,6 +9,7 @@ export const MainStackNavigator = () => {
     return (
         <Stack.Navigator initialRouteName="Login"
             screenOptions={{
+                headerShown: 'true',
                 headerTintColor: 'white',
                 headerStyle: {
                     backgroundColor: '#ee125a',
