@@ -22,7 +22,8 @@ export const MainStackNavigator = () => {
         >
             <Stack.Screen name='Login' component={LoginScreen}
                 options={{ headerShown: false }} />
-            <Stack.Screen name='Home' component={BottomTabsNavigator} />
+            <Stack.Screen name='BottomTabsNavigator' component={BottomTabsNavigator}
+                options={{ headerShown: false }} />
             <Stack.Screen name="Message" component={MessageScreen} />
             <Stack.Screen name="Account" component={AccountScreen} />
             <Stack.Screen name="One" component={OneScreen} />

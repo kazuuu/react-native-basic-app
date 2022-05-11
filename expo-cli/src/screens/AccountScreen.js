@@ -10,7 +10,9 @@ const AccountScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
         <Text>Account Screen</Text>
-        <Button title="Entrar"  onPress={() => navigation.navigate('One')} />
+        <Button title="Ir para OneScreen"  
+          onPress={() => navigation.navigate('One')} 
+        />
     </View>
   );
 };

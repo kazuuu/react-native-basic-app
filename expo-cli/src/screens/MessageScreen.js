@@ -10,7 +10,9 @@ const MessageScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
         <Text>Message Screen</Text>
-        <Button title="Entrar"  onPress={() => navigation.navigate('One')} />
+        <Button title="Ir para OneScreen"  
+          onPress={() => navigation.navigate('One')} 
+        />
     </View>
   );
 };

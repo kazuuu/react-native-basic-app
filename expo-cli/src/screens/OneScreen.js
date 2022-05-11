@@ -10,7 +10,9 @@ const OneScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
         <Text>One Screen</Text>
-        <Button title="Voltar"  onPress={() => navigation.goBack(null)} />
+        <Button title="Voltar"  
+          onPress={() => navigation.goBack(null)} 
+        />
     </View>
   );
 };
