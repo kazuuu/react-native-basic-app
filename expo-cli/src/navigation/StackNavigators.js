@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Exemplo01Screen from "../screens/Exemplo01Screen";
 import LoginScreen from "../screens/LoginScreen";
@@ -13,7 +13,7 @@ export const MainStackNavigator = () => {
     return (
         <Stack.Navigator initialRouteName="Login"
             screenOptions={{
-                headerShown: false,
+                headerShown: 'true',
                 headerTintColor: 'white',
                 headerStyle: {
                     backgroundColor: '#ee125a',
