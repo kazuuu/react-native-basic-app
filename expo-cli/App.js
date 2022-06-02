@@ -1,7 +1,16 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Platform, ImageBackground, ActivityIndicator } from 'react-native';
+import { 
+  StyleSheet,
+  Text,
+  View, 
+  Platform, 
+  ImageBackground, 
+  ActivityIndicator 
+} from 'react-native';
+
 import SearchInput from './src/components/SearchInput';
+
 import getImage from './src/utils/ImagesForWeather';
 import { fetchCoordinates, fetchWeather } from './src/utils/api';
 
