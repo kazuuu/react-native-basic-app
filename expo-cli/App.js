@@ -45,7 +45,8 @@ export default class App extends React.Component {
 
   render() {
     const { loading, error, location, weather, temperature } = this.state;
-console.log(weather);
+    console.log(weather)
+
     return (
       <View style={styles.container}>
         <ImageBackground
@@ -67,7 +68,7 @@ console.log(weather);
                 {!error && (
                   <View>
                     <Text style={[styles.largeText, styles.textStyle]}>{location}</Text>
-                    <Text style={[styles.smallText, styles.textStyle]}>Light Cloud</Text>
+                    <Text style={[styles.smallText, styles.textStyle]}>{weather}</Text>
                     <Text style={[styles.largeText, styles.textStyle]}>{`${Math.round(temperature)}°`}</Text>
                   </View>
                 )}

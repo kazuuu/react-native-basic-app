@@ -5,7 +5,7 @@ const images = {
     'Rain': require('../../assets/images/rain.jpeg'),
     'Thunderstorm': require('../../assets/images/thunderstorm.jpeg'),
     'Snow': require('../../assets/images/snow.jpeg'),
-    'Atmosphere': require('../../assets/images/mist.jpeg'),
+    'Mist': require('../../assets/images/mist.jpeg'),
 }
 
 export default function getImage(weather) {
