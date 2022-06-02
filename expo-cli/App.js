@@ -52,6 +52,39 @@ export default class App extends React.Component {
     });
   };
 
+  renderContent() {
+    const { error } = this.state;
+
+    return (
+      <View>
+        {error && (
+          <Text style={[styles.smallText, styles.textStyle]}>
+            Could not load weather, please try a different city.
+          </Text>
+        )}
+
+        {!error && this.renderInfo()}
+
+        <SearchInput 
+          placeholder="Search any city" 
+          onSubmit={this.handleUpdateLocation}
+        />
+      </View>
+    )
+  }
+
+  renderInfo() {
+    const { location, weather, temperature } = this.state;
+  
+    return (
+      <View>
+        <Text style={[styles.largeText, styles.textStyle]}>{location}</Text>
+        <Text style={[styles.smallText, styles.textStyle]}>{weather}</Text>
+        <Text style={[styles.largeText, styles.textStyle]}>{`${Math.round(temperature)}°`}</Text>
+      </View>
+    );
+  }  
+
   render() {
     const { loading, error, location, weather, temperature } = this.state;
     console.log(weather)
@@ -66,28 +99,7 @@ export default class App extends React.Component {
           <View style={styles.detailContainer}>
             <ActivityIndicator animating={loading} color='white' size='large' />
 
-            {!loading && (
-              <View>
-                {error && (
-                  <Text style={[styles.smallText, styles.textStyle]}>
-                    Could not load weather, please try a different city.
-                  </Text>
-                )}
-
-                {!error && (
-                  <View>
-                    <Text style={[styles.largeText, styles.textStyle]}>{location}</Text>
-                    <Text style={[styles.smallText, styles.textStyle]}>{weather}</Text>
-                    <Text style={[styles.largeText, styles.textStyle]}>{`${Math.round(temperature)}°`}</Text>
-                  </View>
-                )}
-
-                <SearchInput 
-                  placeholder="Search any city" 
-                  onSubmit={this.handleUpdateLocation}
-                />
-              </View>
-            )}
+            {!loading && this.renderContent()}
           </View>
         </ImageBackground>
         <StatusBar style="auto" />
