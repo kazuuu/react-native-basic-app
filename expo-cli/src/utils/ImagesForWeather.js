@@ -1,5 +1,6 @@
 const images = {
     'Clear': require('../../assets/images/clear_sky.jpeg'),
+    'Light Cloud': require('../../assets/images/few_clouds.jpeg'),
     'Clouds': require('../../assets/images/broken_clouds.jpeg'),
     'Drizzle': require('../../assets/images/shower_rain.jpeg'),
     'Rain': require('../../assets/images/rain.jpeg'),
@@ -11,3 +12,4 @@ const images = {
 export default function getImage(weather) {
     return images[weather];
 }
+
